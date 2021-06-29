@@ -7,15 +7,15 @@ const ExpenseForm = ({ onSaveExpense, onFormCancel }) => {
   const [date, setDate] = useState('');
   const [showForm, setShowForm] = useState(false)
 
-  const titleChanHandler = (event) => {
+  const titleChangeHandler = (event) => {
     setTitle(event.target.value);
   }
 
-  const amountChanHandler = (event) => {
+  const amountChangeHandler = (event) => {
     setAmount(event.target.value);
   }
 
-  const dateChanHandler = (event) => {
+  const dateChangeHandler = (event) => {
     setDate(event.target.value);
   }
 
@@ -47,15 +47,15 @@ const ExpenseForm = ({ onSaveExpense, onFormCancel }) => {
       <div className="new-expense__controls">
         <div className="new-expense__control">
           <label>Title</label>
-          <input type="text" onChange={titleChanHandler} value={title}/>
+          <input type="text" onChange={titleChangeHandler} value={title}/>
         </div>
         <div className="new-expense__control">
           <label>Amount</label>
-          <input type="number" min="0.01" step="0.01" onChange={amountChanHandler} value={amount}/>
+          <input type="number" min="0.01" step="0.01" onChange={amountChangeHandler} value={amount}/>
         </div>
         <div className="new-expense__control">
           <label>Date</label>
-          <input type="date" min="2019-01-01" max="2022-12-31" onChange={dateChanHandler} value={date} />
+          <input type="date" min="2019-01-01" max="2022-12-31" onChange={dateChangeHandler} value={date} />
         </div>
         <div className="new-expense__actions">
           <button type="button" onClick={handleCancelButton}>Cancel</button>

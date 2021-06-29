@@ -8,6 +8,7 @@ export const ExpensesList = ({ items }) => {
   } else {
     return items.map(({title, amount, date}, ind) => {
       return <ExpenseItem
+        key={ind}
         title={title}
         amount={amount}
         date={date} 

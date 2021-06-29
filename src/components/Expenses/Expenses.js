@@ -15,9 +15,9 @@ const Expenses = ({ expenses }) => {
 
   return (
     <div>
-      <ExpensesFilter selected={year} onFilterSelect={handleExpenseFilter} />
       <Card className="expenses">
-      <ExpensesList items={filteredExpenses} />
+        <ExpensesFilter selected={year} onFilterSelect={handleExpenseFilter} />
+        <ExpensesList items={filteredExpenses} />
       </Card>
     </div>
   )
